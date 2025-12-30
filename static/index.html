@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Agentic Debugger</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="logo">ANTIGRAVITY <span class="badge">AGENTIC</span></div>
+            <div class="status-indicator">SYSTEM ONLINE</div>
+        </header>
+
+        <!-- Main Grid -->
+        <main class="grid">
+            
+            <!-- Left Panel: Input -->
+            <section class="panel input-panel">
+                <div class="panel-header">
+                    <h3>ERROR LOG INPUT</h3>
+                    <button id="analyzeBtn" class="btn-primary">INITIATE DIAGNOSIS</button>
+                </div>
+                <div class="editor-container">
+                    <textarea id="logInput" placeholder="Paste server logs or stack trace here..."></textarea>
+                </div>
+            </section>
+
+            <!-- Center Panel: Agent Live Feed -->
+            <section class="panel feed-panel">
+                <div class="panel-header">
+                    <h3>AGENT NEURAL FEED</h3>
+                    <div class="pulse-indicator"></div>
+                </div>
+                <div id="feedContainer" class="feed-container">
+                    <div class="feed-item system">System initialized. Waiting for input...</div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Results & Actions -->
+            <section class="panel results-panel">
+                <div class="panel-header">
+                    <h3>DIAGNOSIS & RESOLUTION</h3>
+                </div>
+                
+                <div id="diagnosisCard" class="card hidden">
+                    <div class="card-title">ROOT CAUSE ANALYSIS</div>
+                    <div id="rootCauseText" class="card-body"></div>
+                    <div class="confidence-meter">
+                        <span>Confidence</span>
+                        <div class="progress-bar"><div id="confidenceBar" style="width: 0%"></div></div>
+                        <span id="confidenceValue">0%</span>
+                    </div>
+                </div>
+
+                <div id="actionCard" class="card hidden action-card">
+                    <div class="card-title">PROPOSED REMEDIATION</div>
+                    <pre id="fixCode" class="code-block"></pre>
+                    <div class="validation-status" id="validationStatus"></div>
+                    <div class="actions">
+                        <button class="btn-secondary" disabled>AUTO-EXECUTE (Phase 3)</button>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+    <script src="/static/app.js"></script>
+</body>
+</html>

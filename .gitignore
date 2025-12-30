@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.env
+venv/
+output.txt
+output_phase2.txt
+output_phase3.txt
+.vscode/

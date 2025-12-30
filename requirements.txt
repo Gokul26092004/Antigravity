@@ -1,0 +1,8 @@
+langchain
+langgraph
+langchain-openai
+pydantic
+python-dotenv
+termcolor
+fastapi
+uvicorn
